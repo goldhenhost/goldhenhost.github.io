@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GoldHEN Host</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #eee;
+      text-align: center;
+    }
+
+    header {
+      background: #1e1e1e;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      color: #f1c40f;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #f1c40f;
+      margin-bottom: 15px;
+    }
+
+    .btn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 14px;
+      background: #2c2c2c;
+      border: none;
+      border-radius: 10px;
+      color: #eee;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #f1c40f;
+      color: #121212;
+      transform: scale(1.05);
+    }
+
+    .btn-alt {
+      background: #c0392b;
+    }
+    .btn-alt:hover {
+      background: #e74c3c;
+      color: #fff;
+    }
+
+    .btn-ps5 {
+      background: #2980b9;
+    }
+    .btn-ps5:hover {
+      background: #3498db;
+      color: #fff;
+    }
+
+    .btn-onln {
+      background: #27ae60;
+      grid-column: span 2;
+    }
+    .btn-onln:hover {
+      background: #2ecc71;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    #crypto {
+      display: none;
+      margin-top: 40px;
+    }
+    #crypto img {
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="msgs">Select Your Host</h1>
+  </header>
+
+  <main id="menu">
+    <h2>Select Your Firmware</h2>
+    <div class="btn-grid">
+      <a href="ByMe/index.html"><button class="btn">ByMe</button></a>
+      <a href="GamerHack/index.html"><button class="btn">GamerHack</button></a>
+      <a href="KAR0218/index.html"><button class="btn">KAR0218</button></a>
+
+    </div>
+  </main>
+
+  <script>
+    function donations(){
+      document.getElementById("crypto").style.display = "block";
+      document.getElementById("menu").style.display = "none";
+    }
+    function load_menu(){
+      document.getElementById("menu").style.display = "block";
+      document.getElementById("crypto").style.display = "none";
+    }
+  </script>
+</body>
+</html>
